@@ -1,0 +1,21 @@
+#cross-send-nav-bar-div{
+    padding-right: 15%;
+}
+
+.wrapper {
+    width:600px;
+    margin: 0 auto;
+}
+
+#block1 {
+    float:left;
+}
+
+#block2
+{
+    float:right;
+    background-color: #F5F5F5;
+    margin: 10px 20px;
+    padding: 20px;
+    width: 180px;
+}
