@@ -1,0 +1,32 @@
+{
+  "name": "The_Big_Box_Group",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "createdb The_Big_Box_Groupdb",
+    "db:init": "psql -f schema.sql The_Big_Box_Groupdb",
+    "db:seed": "psql -f seed.sql The_Big_Box_Groupdb",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vasilioskw/The_Big_Box_Group.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vasilioskw/The_Big_Box_Group/issues"
+  },
+  "homepage": "https://github.com/Vasilioskw/The_Big_Box_Group#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}
