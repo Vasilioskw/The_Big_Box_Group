@@ -1,15 +1,15 @@
-create table A_posts (
+create table aposts (
     id serial primary key,
-    A-area varchar(50) not null,
-    A-building-sqft varchar(50) not null
-    A-land-acerage varchar(50) not null,
-    A-category varchar(50) not null
+    aarea varchar(50) not null,
+    abuildingsqft varchar(50) not null,
+    alandacerage varchar(50) not null,
+    acategory varchar(50) not null
 );
 
-create table D_posts (
+create table dposts (
     id serial primary key,
-    D-area varchar(50) not null,
-    D-building-sqft varchar(50) not null
-    D-land-acerage varchar(50) not null,
-    D-category varchar(50) not null
+    darea varchar(50) not null,
+    dbuildingsqft varchar(50) not null,
+    dlandacerage varchar(50) not null,
+    dcategory varchar(50) not null
 );
