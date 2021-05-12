@@ -12,7 +12,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../TBBG.HTML">The PP&BP</a>
+          <a class="navbar-brand" href="/">The PP&BP</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
           aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../profile.HTML">Portfolio</a>
+                <a class="nav-link active" aria-current="page" href="profile">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#bio">Search</a>
@@ -78,10 +78,10 @@
 <hr>
 
 <div style="text-align: center;">
-    <a href="../templates/aquisitions.html">
+    <a href="aquisitions">
       <input type="button" id="Profile-page-Aquisitions" value="Aquisitions" style="width: 48%; margin-right:1%">
         </a>  
-        <a href="../templates/dispositions.html">
+        <a href="dispositions">
           <input type="button" id="Profile-page-Dispositions"  value="Dispositions" style="width: 48%; margin-left:1%">
         </a>  
   
@@ -110,6 +110,9 @@
     
         <label for="CategoryType">Category:</label><br>
         <input type="text" id="CategoryType" name="CategoryType" pattern="[A-Za-z]"><br>
+
+        <label for="Notes">Notes: </label><br>
+    <input type="text" id="Notes" name="Notes" pattern="[A-Za-z]"><br>
         <br>
         <input type="submit">
       </form>
@@ -121,6 +124,8 @@
     <h3>${aposts.abuildingsqft}</h3>
     <h3>${aposts.alandacerage}</h3>
     <h3>${aposts.acategory}</h3>
+    <h3>${aposts.anotes}</h3>
+
   </div>
 <br>
 <br>

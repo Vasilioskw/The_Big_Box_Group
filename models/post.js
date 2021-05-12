@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     aarea: DataTypes.STRING,
     abuildingsqft: DataTypes.NUMBER,
     alandacerage: DataTypes.NUMBER,
-    acategory: DataTypes.STRING
+    acategory: DataTypes.STRING,
+    anotes: DataTypes.STRING
 
   }, {
     sequelize,
@@ -42,7 +43,9 @@ dposts.init({
   darea: DataTypes.STRING,
   dbuildingsqft: DataTypes.NUMBER,
   dlandacerage: DataTypes.NUMBER,
-  dcategory: DataTypes.STRING
+  dcategory: DataTypes.STRING,
+  dnotes: DataTypes.STRING
+
 
 }, {
   sequelize,
