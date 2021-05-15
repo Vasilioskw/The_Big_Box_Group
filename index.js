@@ -11,7 +11,13 @@ app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
 
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: false
+}))
+
 const server = http.createServer(app);
+const {Aposts, Dposts} = require("./models");
 
 app.get('/', (req, res) => {
 
@@ -24,59 +30,24 @@ app.get('/profile', (req, res) => {
 });
 
 
-
-app.get('/aquisitions', (req, res) => {
-const aposts = {
-    
-        // db.find(aposts.aarea)
-
-    aarea: "Houston, TX", 
-    abuildingsqft: 40943, 
-    alandacerage: 2, 
-    acategory: "Shopping Center",
-    anotes: "call 474904408098546"
-};
+app.get('/aquisitions', async (req, res) => {
+const aposts = await Aposts.findAll() 
+// console.log("Aposts data: ", aposts)
 
     res.render('aquisitions', {
         locals: {
-            aposts
+         data: aposts
+            
         }
 });
-})
+});
 
-
-app.get('/dispositions', (req, res) => {
-    const dposts = {
-        darea: "Houston, TX", 
-        dbuildingsqft: 40943, 
-        dlandacerage: 2, 
-        dcategory: "Shopping Center",
-        dnotes: "call 79834793445"
-    };
-    
-        res.render('dispositions', {
-            locals: {
-                dposts
-            }
-    });
-    })
-
-
-
-// app.get('/dispositions', (req, res) => {
-//     res.render('/dispositions');
-// });
-
-
-
-
-
-
-
-
-
-
-
+app.post('/aquisitions/createaposts', async (req, res) => {
+    console.log(req.body)
+    const{aarea, abuildingsqft, alandacerage, acatagory, anotes} = req.body;
+    const newapost = await Aposts.create({aarea, abuildingsqft, alandacerage, acatagory, anotes})
+    res.render('TBBG')
+});
 
 server.listen(port, hostname, () => {
     console.log(`Server is running at http://${hostname}:${port}`)

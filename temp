@@ -1,0 +1,13 @@
+    aarea: DataTypes.STRING,
+    abuildingsqft: DataTypes.NUMBER,
+    alandacerage: DataTypes.NUMBER,
+    acategory: DataTypes.STRING,
+    anotes: DataTypes.STRING
+
+
+
+    darea: DataTypes.STRING,
+    dbuildingsqft: DataTypes.NUMBER,
+    dlandacerage: DataTypes.NUMBER,
+    dcategory: DataTypes.STRING,
+    dnotes: DataTypes.STRING

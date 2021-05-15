@@ -9,7 +9,9 @@
     "db:init": "psql -f schema.sql The_Big_Box_Groupdb",
     "db:seed": "psql -f seed.sql The_Big_Box_Groupdb",
     "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",

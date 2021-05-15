@@ -2,21 +2,21 @@
   "development": {
     "username": "",
     "password": null,
-    "database": "database_development",
+    "database": "The_Big_Box_Groupdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "The_Big_Box_Group",
+    "username": "",
     "password": null,
-    "database": "database_test",
+    "database": "The_Big_Box_Groupdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "The_Big_Box_Group",
+    "username": "",
     "password": null,
-    "database": "database_production",
+    "database": "The_Big_Box_Groupdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
