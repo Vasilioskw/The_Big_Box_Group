@@ -46,8 +46,29 @@ app.post('/aquisitions/createaposts', async (req, res) => {
     console.log(req.body)
     const{aarea, abuildingsqft, alandacerage, acatagory, anotes} = req.body;
     const newapost = await Aposts.create({aarea, abuildingsqft, alandacerage, acatagory, anotes})
-    res.render('TBBG')
+    res.render('aquisitions')
 });
+
+
+
+app.get('/dispositions', async (req, res) => {
+    const dposts = await Dposts.findAll() 
+    // console.log("Aposts data: ", aposts)
+    
+        res.render('dispositions', {
+            locals: {
+             data: dposts
+                
+            }
+    });
+    });
+    
+    app.post('/dispositions/createaposts', async (req, res) => {
+        console.log(req.body)
+        const{darea, dbuildingsqft, dlandacerage, dcatagory, dnotes} = req.body;
+        const newapost = await Dposts.create({darea, dbuildingsqft, dlandacerage, dcatagory, dnotes})
+        res.render('dispositions')
+    });
 
 server.listen(port, hostname, () => {
     console.log(`Server is running at http://${hostname}:${port}`)

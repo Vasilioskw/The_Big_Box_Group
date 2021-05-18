@@ -116,11 +116,18 @@
 
 <div>
   ${data.map(post => {
-    return` <h3>${post.aarea}</h3> 
+    return` 
+    <div class="card">
+      <div class="container">
+    
+    <h3>${post.aarea}</h3> 
     <h3>${post.abuildingsqft}</h3>
     <h3>${post.alandacerage}</h3>
     <h3>${post.acatagory}</h3>
-    <h3>${post.anotes}</h3>`
+    <h3>${post.anotes}</h3>
+      </div>
+    </div>
+    `
   }).join('')}
 
   </div>
