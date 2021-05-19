@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
 </head>
-<body>
+<body background="https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-real-estate-commercial-real-estate-background-banner-image_264561.jpg">
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,12 +23,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="profile">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#bio">Search</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Feed</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#contact">Messages</a>
@@ -54,26 +48,28 @@
     <!-- Nav bar ends here -->
 <!-- Profile start -->
 <div style="padding-left: 12px";>
-<br>
-
-  <div style="display:block;text-align:left" ><img align="left" height="70px" src="https://media-exp1.licdn.com/dms/image/C4D03AQHqV41J6mt9Ow/profile-displayphoto-shrink_400_400/0/1615054421519?e=1625702400&v=beta&t=bsBCRNXexVgyK_K-uwTuvIoi3z_7ZHGjDuIuVDPuZa8"></a> 
-        <h3> <a>  </a> <a> Vasilios Kambouras</h3>
-        <h5> <a>  </a> <a>Manager of Application </h5>
-      <div class="wrapper">
-
-        <div style="float:left; padding-right: 20px;">
-          <h5> Hello, from Vasili. I'm the host of this Real Estate Forum!</h5>
-          <h5> If any posts need to be deleted, please reach out the me.  </h5>
-          <h5> My email is: Inquire.Vasilios@Gmail.com </h5>
+  <br>
+  
+  <div class="bg-light" style="display:block;text-align:left"  ><img align="left" height="70px" src="https://media-exp1.licdn.com/dms/image/C4D03AQHqV41J6mt9Ow/profile-displayphoto-shrink_400_400/0/1615054421519?e=1625702400&v=beta&t=bsBCRNXexVgyK_K-uwTuvIoi3z_7ZHGjDuIuVDPuZa8"></a> 
+          <h3> <a>  </a> <a> Vasilios Kambouras</h3>
+          <h5> <a>  </a> <a>Manager of Application </h5>
+        <div class="wrapper">
         </div>
-        
-        <div style="padding-right: 12px;">
-        <br>
-        <br>
-        <br>
-        <h5> <a>  </a><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Linkedin.svg" style="height: 25px; width: 25px;"> <a>  </a><a href="https://www.linkedin.com/in/vasilios-kambouras-114327157/">Linkedin</a> </h5>
-        </div>
+  
+          <div style="float:left; padding-right: 20px;" class="bg-light">
+            <h5> Hello, from Vasili. I'm the host of this Real Estate Forum!</h5>
+            <h5> If any posts need to be deleted, please reach out the me.  </h5>
+            <h5> My email is: Inquire.Vasilios@Gmail.com </h5>
+          </div>
+          
+          <div style="padding-right: 12px;">
+          <br>
+          <br>
+          <br>
+          <h5> <a>  </a><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Linkedin.svg" style="height: 25px; width: 25px;"> <a>  </a><a href="https://www.linkedin.com/in/vasilios-kambouras-114327157/">Linkedin</a> </h5>
   </div>
+    </div>
+      </div>
 
 <hr>
 
@@ -94,11 +90,12 @@
 
    <!-- DISPITIONS -->
 
+   <div style="margin-left: 15px;">
 
-  <form>
-    <form action="/dispositions/createaposts">
+    <form action="/dispositions/createaposts"
+    method="POST"> 
     <label for="AreaLocation">Area: </label><br>
-    <input type="text" id="AreaLocation" name="AreaLocation" pattern="[A-Za-z]"> <br>
+    <input type="text" id="AreaLocation" name="AreaLocation"> <br>
 
     <label for="BuildingSqft">Building Sqft: </label><br>
     <input type="number" id="BuildingSqft" name="BuildingSqft"><br>
@@ -107,10 +104,10 @@
     <input type="number" id="LandAcerage" name="LandAcerage"><br>
 
     <label for="CategoryType">Category:</label><br>
-    <input type="text" id="CategoryType" name="CategoryType" pattern="[A-Za-z]"><br>
+    <input type="text" id="CategoryType" name="CategoryType"><br>
 
     <label for="Notes">Notes: </label><br>
-    <input type="text" id="Notes" name="Notes" pattern="[A-Za-z]"><br>
+    <input type="text" id="Notes" name="Notes"><br>
     <br>
     <button type="submit" id="dbutton"> submit </button>
     </form>
@@ -121,21 +118,23 @@
 <div>
   ${data.map(post => {
     return` 
-    <div class="card">
-      <div class="container">
+    <div style="padding-top: 5px; padding-bottom: 5px">
+
+    <div id="BScard"> 
+      <div class="card">
+        <div class="container">
     
-    <h3>${post.darea}</h3> 
-    <h3>${post.dbuildingsqft}</h3>
-    <h3>${post.dlandacerage}</h3>
-    <h3>${post.dcatagory}</h3>
-    <h3>${post.dnotes}</h3>
-    
-      </div>
+    <h3> Area: ${post.darea}</h3> 
+    <h3> Building Sqft: ${post.dbuildingsqft}</h3>
+    <h3> Land Acerage: ${post.dlandacerage}</h3>
+    <h3> Category: ${post.dcatagory}</h3>
+    <h3> Notes: ${post.dnotes}</h3>
     </div>
+      </div>
+        </div>
+        </div>
     `
   }).join('')}
-
-  </div>
 
  <br>
  <br>
