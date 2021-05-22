@@ -33,7 +33,6 @@ app.get('/profile', (req, res) => {
 app.get('/aquisitions', async (req, res) => {
 const aposts = await Aposts.findAll() 
 // console.log("Aposts data: ", aposts)
-
     res.render('aquisitions', {
         locals: {
          data: aposts
@@ -53,8 +52,7 @@ app.post('/aquisitions/createaposts', async (req, res) => {
 
 app.get('/dispositions', async (req, res) => {
     const dposts = await Dposts.findAll() 
-    // console.log("Aposts data: ", aposts)
-    
+    // console.log("dposts data: ", dposts)
         res.render('dispositions', {
             locals: {
              data: dposts
