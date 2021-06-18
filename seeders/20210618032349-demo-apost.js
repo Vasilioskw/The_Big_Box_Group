@@ -8,7 +8,7 @@ module.exports = {
       aarea: 'Houston, TX', 
       abuildingsqft: 40943, 
       alandacerage: 2, 
-      acatagory: 'Shopping Center',
+      acategory: 'Shopping Center',
       anotes: 'call 474904408098546',
       createdAt: new Date(),
       updatedAt: new Date()

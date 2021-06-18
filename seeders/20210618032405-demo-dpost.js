@@ -8,7 +8,7 @@ module.exports = {
       darea: 'Houston, TX', 
       dbuildingsqft: 40943, 
       dlandacerage: 2, 
-      dcatagory: 'Shopping Center',
+      dcategory: 'Shopping Center',
       dnotes: 'call 474904408098546',
       createdAt: new Date(),
       updatedAt: new Date()
