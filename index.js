@@ -20,7 +20,7 @@ const {apost, dpost} = require("./models");
 
 app.get('/', (req, res) => {
 
-    res.render('TBBG')
+    res.render('home')
 });
 
 app.get('/profile', (req, res) => {
@@ -44,7 +44,7 @@ app.post('/aquisitions/createaposts', async (req, res) => {
     console.log(req.body)
     const{aarea, abuildingsqft, alandacerage, acatagory, anotes} = req.body;
     const newapost = await apost.create({aarea, abuildingsqft, alandacerage, acatagory, anotes})
-    res.render('TBBG')
+    res.render('home')
 });
 
 
@@ -64,7 +64,7 @@ app.get('/dispositions', async (req, res) => {
         console.log(req.body)
         const{darea, dbuildingsqft, dlandacerage, dcatagory, dnotes} = req.body;
         const newapost = await dpost.create({darea, dbuildingsqft, dlandacerage, dcatagory, dnotes})
-        res.render('TBBG')
+        res.render('home')
     });
 
 
