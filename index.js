@@ -42,8 +42,8 @@ const apostsData = await apost.findAll()
 
 app.post('/aquisitions/createaposts', async (req, res) => {
     console.log(req.body)
-    const{aarea, abuildingsqft, alandacerage, acatagory, anotes} = req.body;
-    const newapost = await apost.create({aarea, abuildingsqft, alandacerage, acatagory, anotes})
+    const{aarea, abuildingsqft, alandacerage, acategory, anotes} = req.body;
+    const newapost = await apost.create({aarea, abuildingsqft, alandacerage, acategory, anotes})
     res.render('home')
 });
 
@@ -62,8 +62,8 @@ app.get('/dispositions', async (req, res) => {
     
     app.post('/dispositions/createdposts', async (req, res) => {
         console.log(req.body)
-        const{darea, dbuildingsqft, dlandacerage, dcatagory, dnotes} = req.body;
-        const newapost = await dpost.create({darea, dbuildingsqft, dlandacerage, dcatagory, dnotes})
+        const{darea, dbuildingsqft, dlandacerage, dcategory, dnotes} = req.body;
+        const newapost = await dpost.create({darea, dbuildingsqft, dlandacerage, dcategory, dnotes})
         res.render('home')
     });
 
