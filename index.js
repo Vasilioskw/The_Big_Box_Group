@@ -1,7 +1,7 @@
-const http = require('http');
+// const http = require('http');
 require("dotenv").config();
 
-const hostname = '127.0.0.1';
+// const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
 
 const express = require('express');
@@ -70,6 +70,6 @@ app.get('/dispositions', async (req, res) => {
     });
 
 
-server.listen(port, hostname, () => {
-    console.log(`Server is running at http://${hostname}:${port}`)
+server.listen(port, () => {
+    console.log(`Server is running at ${port}`)
 });
