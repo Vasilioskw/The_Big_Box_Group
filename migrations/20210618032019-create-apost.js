@@ -1,26 +1,26 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('dposts', {
+    await queryInterface.createTable('aposts', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      darea: {
+      aarea: {
         type: Sequelize.STRING
       },
-      dbuildingsqft: {
+      abuildingsqft: {
         type: Sequelize.INTEGER
       },
-      dlandacerage: {
+      alandacerage: {
         type: Sequelize.INTEGER
       },
-      dcatagory: {
+      acategory: {
         type: Sequelize.STRING
       },
-      dnotes: {
+      anotes: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -34,6 +34,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('dposts');
+    await queryInterface.dropTable('aposts');
   }
 };

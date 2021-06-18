@@ -1,0 +1,30 @@
+'use strict';
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+
+    
+     await queryInterface.bulkInsert('aposts', [{
+      aarea: 'Houston, TX', 
+      abuildingsqft: 40943, 
+      alandacerage: 2, 
+      acategory: 'Shopping Center',
+      anotes: 'call 474904408098546',
+      createdAt: new Date(),
+      updatedAt: new Date()
+     }], {});
+  },
+
+  down: async (queryInterface, Sequelize) => {
+ 
+     await queryInterface.bulkDelete('aposts', null, {});
+  }
+};
+
+
+
+   aarea: DataTypes.STRING,
+    abuildingsqft: DataTypes.INTEGER,
+    alandacerage: DataTypes.INTEGER,
+    acatagory: DataTypes.STRING,
+    anotes: DataTypes.STRING
