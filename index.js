@@ -1,7 +1,6 @@
-// const http = require('http');
+
 require("dotenv").config();
 
-// const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
 
 const express = require('express');
@@ -17,7 +16,6 @@ app.use(express.urlencoded({
     extended: false
 }))
 
-const server = http.createServer(app);
 const {apost, dpost} = require("./models");
 
 app.get('/', (req, res) => {
@@ -70,6 +68,6 @@ app.get('/dispositions', async (req, res) => {
     });
 
 
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server is running at ${port}`)
 });
