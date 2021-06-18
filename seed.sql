@@ -1,4 +1,4 @@
-insert into Aposts
+insert into aposts
     (aarea, abuildingsqft, alandacerage, acategory, anotes, createdAt, updatedAt)
 values
     ('Houston, TX', 40000, 2, 'Land', 'N/A', 2021-05-15 11:26:06.385-04, 2021-05-15 11:26:06.385-04),
@@ -7,7 +7,7 @@ values
     ('Ashtabula, OH',  0, 9, 'Land', 'N/A')
     ;
 
-insert into Dposts
+insert into dposts
     (darea, dbuildingsqft, dlandacerage, dcategory, dnotes, createdAt, updatedAt)
 values
     ('Dallas, TX', 40000, 2, 'Land', 'Call 978657453', 2021-05-15 11:26:06.385-04, 2021-05-15 11:26:06.385-04),

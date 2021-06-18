@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 }))
 
 const server = http.createServer(app);
-const {Aposts, Dposts} = require("./models");
+const {aposts, dposts} = require("./models");
 
 app.get('/', (req, res) => {
 
@@ -32,11 +32,11 @@ app.get('/profile', (req, res) => {
 
 
 app.get('/aquisitions', async (req, res) => {
-const aposts = await Aposts.findAll() 
-// console.log("Aposts data: ", aposts)
+const apostsData = await aposts.findAll() 
+// console.log("aposts data: ", aposts)
     res.render('aquisitions', {
         locals: {
-         data: aposts
+         data: apostsData
             
         }
 });
@@ -45,27 +45,27 @@ const aposts = await Aposts.findAll()
 app.post('/aquisitions/createaposts', async (req, res) => {
     console.log(req.body)
     const{aarea, abuildingsqft, alandacerage, acatagory, anotes} = req.body;
-    const newapost = await Aposts.create({aarea, abuildingsqft, alandacerage, acatagory, anotes})
+    const newapost = await aposts.create({aarea, abuildingsqft, alandacerage, acatagory, anotes})
     res.render('TBBG')
 });
 
 
 
 app.get('/dispositions', async (req, res) => {
-    const dposts = await Dposts.findAll() 
+    const dpostsData = await dposts.findAll() 
     // console.log("dposts data: ", dposts)
         res.render('dispositions', {
             locals: {
-             data: dposts
+             data: dpostsData
                 
             }
     });
     });
     
-    app.post('/dispositions/createaposts', async (req, res) => {
+    app.post('/dispositions/createdposts', async (req, res) => {
         console.log(req.body)
         const{darea, dbuildingsqft, dlandacerage, dcatagory, dnotes} = req.body;
-        const newapost = await Dposts.create({darea, dbuildingsqft, dlandacerage, dcatagory, dnotes})
+        const newapost = await dposts.create({darea, dbuildingsqft, dlandacerage, dcatagory, dnotes})
         res.render('TBBG')
     });
 
