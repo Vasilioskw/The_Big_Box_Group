@@ -25,11 +25,14 @@
   },
   "homepage": "https://github.com/Vasilioskw/The_Big_Box_Group#readme",
   "dependencies": {
+    "connect": "^3.7.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-es6-template-engine": "^2.2.3",
+    "path": "^0.12.7",
     "pg": "^8.6.0",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7",
